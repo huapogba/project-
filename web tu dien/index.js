@@ -4,7 +4,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const sql = require("mssql");
-const cors = require('cors');
+
 
 require("dotenv").config();
 
