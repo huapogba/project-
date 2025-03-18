@@ -191,7 +191,7 @@ function startServer() {
     });
     // Lắng nghe trên cổng 3000
     const PORT = 3000;
-const HOST = "10.14.30.60"; // Lắng nghe trên tất cả địa chỉ IP trong mạng
+const HOST = "10.0.156.137"; // Lắng nghe trên tất cả địa chỉ IP trong mạng
 app.listen(PORT, HOST, () => {
     console.log(`✅ Server chạy tại: http://${HOST}:${PORT}`);
 });
