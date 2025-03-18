@@ -9,7 +9,7 @@ const sql = require("mssql");
 require("dotenv").config();
 
 // Cấu hình kết nối SQL Server
-const config = {
+/*const config = {
     user: "sa",
     password: "MatKhauMoi!",
     server: "LAPTOP-9K0RRUKB",
@@ -18,7 +18,20 @@ const config = {
         encrypt: false,
         trustServerCertificate: true,
     },
+};*/
+
+const config = {
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_DATABASE,
+    options: {
+        encrypt: true,  // Nếu dùng Azure SQL Server
+        trustServerCertificate: false, // Để bảo mật hơn
+    },
 };
+
+module.exports = config;
 
 // Khởi tạo ứng dụng Express
 const app = express();
